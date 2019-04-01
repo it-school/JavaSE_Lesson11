@@ -18,8 +18,22 @@ class Main {
             System.out.println("Имя : " + element.getName() + ", возраст : " + element.getAge());
         }
 
+        for (MyClass person : arrayListMyClass)
+        {
+            System.out.println(person);
+        }
+
         System.out.println(arrayListMyClass.contains(new MyClass("Алексей", 12)));
         System.out.println(arrayListMyClass.contains(object));
+
+        for (MyClass person : arrayListMyClass)
+        {
+            if ("Алексей".equals(person.getName()) && 12 == person.getAge())
+            {
+                System.out.println(true);
+                break;
+            }
+        }
 
         MyClass[] array = new MyClass[arrayListMyClass.size()];
         arrayListMyClass.toArray(array);

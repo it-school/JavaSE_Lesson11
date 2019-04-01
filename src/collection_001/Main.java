@@ -15,12 +15,14 @@ class Main {
         arrayListInteger.add(1);
         arrayListInteger.add(2);
         arrayListInteger.add(3);
+        arrayListInteger.add(1);
 
         System.out.printf("Коллекция (%d):\n" , arrayListInteger.size());
 
         for (Integer element : arrayListInteger) {
-            System.out.println(element);
+            System.out.print(element + ", ");
         }
+        System.out.println();
 
         arrayListInteger.remove((Integer) 1);
         System.out.println(Arrays.toString(arrayListInteger.toArray()));
@@ -29,7 +31,7 @@ class Main {
         System.out.println(arrayListInteger.get(2));
 
 
-        //arrayListInteger.ensureCapacity(16);
-        // System.out.println(arrayListInteger.size());
+        arrayListInteger.ensureCapacity(16);
+        System.out.println(arrayListInteger.size());
     }
 }

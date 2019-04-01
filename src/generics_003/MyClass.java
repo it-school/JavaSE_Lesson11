@@ -7,7 +7,7 @@ class MyClass {
         } else if (num instanceof Integer) {
             System.out.println("Число имеет тип Integer");
         } else if (num instanceof String) {
-            System.out.println(Integer.valueOf(num.toString()));
+            System.out.println("String: " + Integer.valueOf(num.toString()));
         } else {
             System.out.println("Число имеет другой тип");
         }

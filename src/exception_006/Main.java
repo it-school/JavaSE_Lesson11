@@ -10,7 +10,7 @@ public class Main
         try {
             a = Integer.valueOf(arg);
         } catch (Exception e) {
-//            System.out.println(e);
+            System.out.println(e);
         }
         finally {
             return a;
@@ -18,10 +18,11 @@ public class Main
       }
 
     public static void main(String[] args) {
-        String number = "123";
+        String number = "12,3";
         float fnumber = 0;
         boolean result = false;
         System.out.println(info(number));
+
         Scanner scanner = new Scanner(System.in);
 
         while (result == false) {
@@ -31,7 +32,7 @@ public class Main
                 fnumber = Float.valueOf(number);
                 result = true;
             } catch (Exception e) {
-                System.out.println(e + "\nTry to input again:\n");
+                System.out.println(e.getLocalizedMessage() + "\nTry to input again:\n");
             }
         }
         scanner.close();

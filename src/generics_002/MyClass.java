@@ -23,7 +23,12 @@ class MyClass<TYPE1, TYPE2> {
     public void info()
     {
         if (this.field1 instanceof Number)
-            System.out.println("field1 is Number");
-
+        {
+            System.out.println(field1 + " is Number");
+        }
+        else
+        {
+            System.out.println(field1 + " is NOT Number");
+        }
     }
 }

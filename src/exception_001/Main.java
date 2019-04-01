@@ -7,10 +7,9 @@ class Main {
         } catch (ArithmeticException ex1) {
             System.out.println(ex1);
             System.exit(0);  // Из-за этого не доберёмся до блока finally
-
         } catch (Exception ex) {
             System.out.println("На ноль делить нельзя!");
-            System.out.println(ex);
+            System.out.println(ex.getLocalizedMessage());
         }
         finally {
             System.out.println("AnyWay");
