@@ -10,7 +10,7 @@ class Main {
         a = b;  // unboxing
         b = a;  // boxing
         Integer [] arrayInt = new Integer[10];
-        ArrayList<Integer> arrayListInteger = new ArrayList<>();
+        ArrayList<Integer> arrayListInteger = new ArrayList();
 
         arrayListInteger.add(1);
         arrayListInteger.add(2);
@@ -24,12 +24,14 @@ class Main {
         }
         System.out.println();
 
+        int n = 0;
         arrayListInteger.remove((Integer) 1);
+
         System.out.println(Arrays.toString(arrayListInteger.toArray()));
         System.out.println(arrayListInteger.toString());
 
         System.out.println(arrayListInteger.get(2));
-
+        System.out.println(arrayListInteger.toArray()[2]);
 
         arrayListInteger.ensureCapacity(16);
         System.out.println(arrayListInteger.size());

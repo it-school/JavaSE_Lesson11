@@ -9,7 +9,7 @@ public class Main
 
         try {
             a = Integer.valueOf(arg);
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
             System.out.println(e);
         }
         finally {
