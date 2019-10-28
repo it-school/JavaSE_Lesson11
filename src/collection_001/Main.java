@@ -11,7 +11,7 @@ class Main {
         b = a;  // boxing
         Integer [] arrayInt = new Integer[10];
         ArrayList<Integer> arrayListInteger = new ArrayList();
-
+        //arrayListInteger.ensureCapacity(100000);
         arrayListInteger.add(1);
         arrayListInteger.add(2);
         arrayListInteger.add(3);
@@ -33,7 +33,8 @@ class Main {
         System.out.println(arrayListInteger.get(2));
         System.out.println(arrayListInteger.toArray()[2]);
 
+        System.out.println("Current size: " + arrayListInteger.size());
         arrayListInteger.ensureCapacity(16);
-        System.out.println(arrayListInteger.size());
+        System.out.println("Current size: " + arrayListInteger.size());
     }
 }

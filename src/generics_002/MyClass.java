@@ -1,8 +1,5 @@
 package generics_002;
 
-/**
- * Created by Юрий on 02.12.2016.
- */
 class MyClass<TYPE1, TYPE2> {
     private TYPE1 field1;
     private TYPE2 field2;
@@ -22,13 +19,7 @@ class MyClass<TYPE1, TYPE2> {
 
     public void info()
     {
-        if (this.field1 instanceof Number)
-        {
-            System.out.println(field1 + " is Number");
-        }
-        else
-        {
-            System.out.println(field1 + " is NOT Number");
-        }
+        System.out.println(field1 + " is " + (this.field1 instanceof Number ? "" : "NOT ") + "Number");
+        System.out.println(field2 + " is " + (this.field2 instanceof Number ? "" : "NOT ") + "Number");
     }
 }
