@@ -15,19 +15,22 @@ class Main {
         arrayListInteger.add(1);
         arrayListInteger.add(2);
         arrayListInteger.add(3);
+        arrayListInteger.add(4);
         arrayListInteger.add(1);
 
-        System.out.printf("Коллекция (%d):\n" , arrayListInteger.size());
+        System.out.printf("Коллекция (%d):\n", arrayListInteger.size());
 
         for (Integer element : arrayListInteger) {
             System.out.print(element + ", ");
         }
-        System.out.println();
 
         int n = 0;
+        System.out.println("\nRemove first 1:");
         arrayListInteger.remove((Integer) 1);
-
         System.out.println(Arrays.toString(arrayListInteger.toArray()));
+
+        System.out.println("Remove next 1:");
+        arrayListInteger.remove((Integer) 1);
         System.out.println(arrayListInteger.toString());
 
         System.out.println(arrayListInteger.get(2));

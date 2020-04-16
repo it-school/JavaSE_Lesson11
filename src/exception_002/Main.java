@@ -4,15 +4,16 @@ class Main {
     static public void main(String[] args) {
         Exception exception = new Exception();
 
-        try
-        {
-            throw exception;
-        } catch (ArithmeticException ex)
-        {
-            System.out.println(ex.getLocalizedMessage());
+        try {
+            int a = 2;
+            int b = 0;
+            int c = a / b;
+        }
+        catch (ArithmeticException ex) {
+            System.out.println("1" + ex.getLocalizedMessage());
 
-        } catch (Exception ex)
-        {
+        }
+        catch (Exception ex) {
             System.out.println("Обработка исключений : ");
             System.out.println(ex.getLocalizedMessage());
         }
