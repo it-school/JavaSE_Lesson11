@@ -9,5 +9,6 @@ class Main {
         MyClass.Method(23.4f);
         MyClass.Method("123");
         MyClass.Method(((Number) 123.4f).byteValue());
+	    MyClass.Method(new generics_001.MyClass());
     }
 }

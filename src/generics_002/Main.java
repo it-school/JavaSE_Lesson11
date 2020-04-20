@@ -21,7 +21,7 @@ public class Main {
         instance3.info();
         System.out.println();
 
-        MyClass<Double, String> instance4 =  new MyClass<>(0.123, "Hello from fourth instance");
+        MyClass<Double, String> instance4 = new MyClass<>(0.123, "123");
         System.out.println(instance4.getField1());
         System.out.println(instance4.getField2());
         instance4.info();

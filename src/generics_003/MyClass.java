@@ -16,7 +16,7 @@ class MyClass {
 	        System.out.println("String: " + Integer.valueOf(num.toString()));
         }
         else {
-	        System.out.println("Число имеет другой тип");
+	        System.out.println("Число имеет другой тип: " + num.getClass());
         }
     }
 }
