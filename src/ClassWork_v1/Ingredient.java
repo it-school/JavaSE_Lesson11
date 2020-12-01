@@ -3,10 +3,10 @@ package ClassWork_v1;
 public class Ingredient
 {
 	private String title;
-	private Measurments measurement;
+	private Measurements measurement;
 	private String desc;
 
-	public Ingredient(String title, Measurments measurement, String desc)
+	public Ingredient(String title, Measurements measurement, String desc)
 	{
 		this.title = title;
 		this.measurement = measurement;
@@ -23,12 +23,12 @@ public class Ingredient
 		this.title = title;
 	}
 
-	public Measurments getMeasurement()
+	public Measurements getMeasurement()
 	{
 		return measurement;
 	}
 
-	public void setMeasurement(Measurments measurement)
+	public void setMeasurement(Measurements measurement)
 	{
 		this.measurement = measurement;
 	}

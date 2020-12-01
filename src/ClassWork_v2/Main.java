@@ -2,7 +2,7 @@ package ClassWork_v2;
 
 public class Main {
     public static void main(String[] args) {
-        Meal meal1 = new Meal("Shahlyk", 100);
+        Meal meal1 = new Meal("Shashlyk", 100);
         meal1.addIngredient(new Ingredient("Meat", 500, 300));
         meal1.addIngredient(new Ingredient("Lettuce", 50, 3));
         meal1.addIngredient(new Ingredient("Oil", 20, 180));

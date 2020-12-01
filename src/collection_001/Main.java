@@ -26,7 +26,6 @@ class Main
 			System.out.print(element + ", ");
 		}
 
-		int n = 0;
 		System.out.println("\nRemove first 1:");
 		arrayListInteger.remove((Integer) 1);
 		System.out.println(Arrays.toString(arrayListInteger.toArray()));
