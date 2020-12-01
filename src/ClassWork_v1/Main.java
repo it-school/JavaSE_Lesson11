@@ -24,8 +24,8 @@ public class Main {
         ings1.add(im4);
         ings1.add(im3);
 
-        Meal meal1 = new Meal("Tea", ings1, "Strong and tasty", 10, new Time(0, 1), 20);
-        Meal meal2 = new Meal("Coffee", ings1, "Very strong and tasty", 20, new Time(0, 1), 25);
+        Meal meal1 = new Meal("Tea", ings1, "Strong and tasty", 10, new Time(0, 3), 20);
+        Meal meal2 = new Meal("Coffee", ings1, "Very strong and tasty", 20, new Time(0, 5), 25);
 //		System.out.println(meal1);
 //		System.out.println(meal2);
 
