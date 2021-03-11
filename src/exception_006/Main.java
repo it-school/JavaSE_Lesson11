@@ -9,7 +9,7 @@ public class Main {
         try {
             a = Integer.valueOf(arg);
         } catch (NumberFormatException e) {
-            System.out.println(e);
+            System.out.println(e.getLocalizedMessage());
         } finally {
             return a;
         }

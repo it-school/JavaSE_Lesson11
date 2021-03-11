@@ -13,7 +13,6 @@ class Main {
         arrayListMyClass.add(new Person("Сергей", 21));
         arrayListMyClass.add(human);
 
-
         for (Person element : arrayListMyClass) {
             System.out.println("Имя : " + element.getName() + ", возраст : " + element.getAge());
         }

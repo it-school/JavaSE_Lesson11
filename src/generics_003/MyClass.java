@@ -10,6 +10,7 @@ public class MyClass {
          System.out.println("Число имеет тип Float");
       } else if (num instanceof Byte) {
          System.out.println("Число имеет тип Byte");
+         System.out.println(num);
         }
         else if (num instanceof String) {
 	        System.out.println("String: " + Integer.valueOf(num.toString()));

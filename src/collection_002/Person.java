@@ -1,6 +1,5 @@
 package collection_002;
 
-
 class Person implements Comparable {
     private final String name;
     private final int age;
