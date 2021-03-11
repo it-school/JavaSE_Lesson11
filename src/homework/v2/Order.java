@@ -1,4 +1,4 @@
-package ClassWork_v2;
+package homework.v2;
 
 import java.util.ArrayList;
 import java.util.Date;

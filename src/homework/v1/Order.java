@@ -1,4 +1,4 @@
-package ClassWork_v1;
+package homework.v1;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -66,7 +66,9 @@ public class Order
 	public void Remove(String title)
 	{
 		for (int i = 0; i < meals.size(); i++) {
-			if (title.trim().toLowerCase().equals(meals.get(i).getTitle().trim().toLowerCase())) { meals.remove(i); }
+			if (title.trim().equalsIgnoreCase(meals.get(i).getTitle().trim())) {
+				meals.remove(i);
+			}
 		}
 	}
 

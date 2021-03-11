@@ -1,4 +1,4 @@
-package ClassWork_v1;
+package homework.v1;
 
 import java.util.ArrayList;
 
@@ -35,7 +35,7 @@ public class Orders {
         for (int i = 0; i < orders.size(); i++) {
             for (Meal meal : orders.get(i).getMeals()) {
                 for (Ingredient4Meal imeal : meal.getIngredients()) {
-                    if (imeal.getIngredient().getTitle().trim().toLowerCase().equals(byIngredientTitle.trim().toLowerCase())) {
+                    if (imeal.getIngredient().getTitle().trim().equalsIgnoreCase(byIngredientTitle.trim())) {
                         tempOrders.Add(orders.get(i));
                         continue f1;
                     }
