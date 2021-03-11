@@ -1,8 +1,8 @@
 package generics_002;
 
-class MyClass<TYPE1, TYPE2> {
-    private TYPE1 field1;
-    private TYPE2 field2;
+public class MyClass<TYPE1, TYPE2> {
+    private final TYPE1 field1;
+    private final TYPE2 field2;
 
     MyClass(TYPE1 _field1, TYPE2 _field2) {
         this.field1 = _field1;
