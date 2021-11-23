@@ -15,7 +15,7 @@ public class Main {
         instance2.info();
         System.out.println();
 
-        MyClass<String, String> instance3 =  new MyClass<>("Hello from third instance - 1", "Hello from third instance - 2");
+        MyClass<String, String> instance3 = new MyClass<>("1", "2");
         System.out.println(instance3.getField1());
         System.out.println(instance3.getField2());
         instance3.info();
