@@ -1,5 +1,8 @@
 package classwork.menu;
 
+/**
+ * Информация об ингредиенте для блюд
+ */
 public class Ingredient {
    private String title;
    private int quantity;
@@ -50,8 +53,6 @@ public class Ingredient {
 
    @Override
    public String toString() {
-      return title + ", quantity=" + quantity +
-              ", units=" + units +
-              ", description='" + description + '\'';
+      return title + " (" + description + "): " + quantity + " " + units;
    }
 }

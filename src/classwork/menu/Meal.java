@@ -1,8 +1,12 @@
 package classwork.menu;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
+/**
+ * Информация о блюде в заведении
+ */
 public class Meal {
    private String title;                  //название
    private List<Ingredient> ingredients;  // список ингредиентов
@@ -13,9 +17,12 @@ public class Meal {
    public Meal(String title, String description, int caloriesNumber, int timeOfPrepareInMinutes, Ingredient... ingredients) {
       this.setTitle(title);
       this.ingredients = new ArrayList<>();
-      for (Ingredient ingredient : ingredients) {
-         this.ingredients.add(ingredient);
-      }
+
+//      for (Ingredient ingredient : ingredients) {
+//         this.ingredients.add(ingredient);
+//      }
+      Collections.addAll(this.ingredients, ingredients);
+
       this.setDescription(description);
       this.setCaloriesNumber(caloriesNumber);
       this.setTimeOfPrepareInMinutes(timeOfPrepareInMinutes);
@@ -67,10 +74,6 @@ public class Meal {
 
    @Override
    public String toString() {
-      return '\n' + title + ", ingredients=" + ingredients +
-              ", description='" + description + '\'' +
-              ", caloriesNumber=" + caloriesNumber +
-              ", timeOfPrepareInMinutes=" + timeOfPrepareInMinutes +
-              '\n';
+      return "\n\t\t" + title + " (" + description + "), ingredients: " + ingredients + ", " + caloriesNumber + " cals, prepare time:" + timeOfPrepareInMinutes;
    }
 }

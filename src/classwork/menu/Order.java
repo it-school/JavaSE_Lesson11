@@ -1,9 +1,14 @@
 package classwork.menu;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
+/**
+ * Информация о заказе
+ */
 public class Order {
    private final List<Meal> meals; // безразмерный список блюд (экземпляров класса Блюдо)
    private final int tableNumber; // номер стола
@@ -14,9 +19,12 @@ public class Order {
    public Order(int tableNumber, Meal... meals) {
       this.orderTime = LocalDateTime.now();
       this.meals = new ArrayList<>();
-      for (Meal meal : meals) {
-         this.meals.add(meal);
-      }
+
+//      for (Meal meal : meals) {
+//         this.meals.add(meal);
+//      }
+      Collections.addAll(this.meals, meals);
+
       this.tableNumber = tableNumber;
       this.state = State.inProgress;
    }
@@ -51,11 +59,6 @@ public class Order {
 
    @Override
    public String toString() {
-      return "Order " + id +
-              ": orderTime=" + orderTime.getHour() + ":" + orderTime.getMinute() +
-              ", meals=" + meals +
-              ", state=" + state +
-              ", tableNumber=" + tableNumber +
-              "'}\n";
+      return "\n\tOrder " + id + ", table# " + tableNumber + " (started in " + orderTime.format(DateTimeFormatter.ofPattern("HH:mm")) + " - " + state + "): \n\t" + meals;
    }
 }

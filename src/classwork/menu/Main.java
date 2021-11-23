@@ -14,10 +14,10 @@ public class Main {
 //      8) Реализовать проверки корректности значений для всех Setter'ов.
 
       System.out.println("\nIngredients by one:\n");
-      Ingredient sugar = new Ingredient("Sugar", 5, Units.gramm, "brown");
-      Ingredient coffee = new Ingredient("Coffee", 3, Units.gramm, "Brazil");
-      Ingredient tea1 = new Ingredient("Tea", 3, Units.gramm, "green");
-      Ingredient tea2 = new Ingredient("Tea", 3, Units.gramm, "black");
+      Ingredient sugar = new Ingredient("Sugar", 5, Units.gramme, "brown");
+      Ingredient coffee = new Ingredient("Coffee", 3, Units.gramme, "Brazil");
+      Ingredient tea1 = new Ingredient("Tea", 3, Units.gramme, "green");
+      Ingredient tea2 = new Ingredient("Tea", 3, Units.gramme, "black");
       Ingredient milk = new Ingredient("Milk", 5, Units.tea_spoon, "3.2%");
       Ingredient water = new Ingredient("Water", 1, Units.glass, "clean");
       System.out.println(sugar);
@@ -28,7 +28,7 @@ public class Main {
       System.out.println(water);
 
 
-      System.out.println("\nMeals by one:\n");
+      System.out.println("\nMeals by one:");
       Meal coffeeWithMilk = new Meal("Coffee with milk", "Coffee with milk", 50, 5, coffee, milk, water, sugar);
       Meal americano = new Meal("Coffee americano", "Coffee americano with milk", 50, 5, coffee, milk, water, water, sugar);
       Meal greenTea = new Meal("Tea (green)", "Tea (green)", 5, 3, tea1, water);
@@ -36,7 +36,7 @@ public class Main {
       System.out.println(americano);
       System.out.println(greenTea);
 
-      System.out.println("\nOrders by one:\n");
+      System.out.println("\nOrders by one:");
       Order order1 = new Order(1, coffeeWithMilk, americano);
       Order order2 = new Order(2, greenTea);
       Order order3 = new Order(3, greenTea, greenTea, greenTea, greenTea);
@@ -74,7 +74,7 @@ public class Main {
       try {
          System.out.println(orders.find(LocalDateTime.of(2021, -11, 23, 21, 44)));
       } catch (Exception e) {
-         System.out.println("Error while searching by title!");
+         System.out.println("Error while searching orders of specified time!");
       }
 
 
