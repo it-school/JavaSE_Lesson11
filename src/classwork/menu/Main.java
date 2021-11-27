@@ -1,6 +1,7 @@
 package classwork.menu;
 
 import java.time.LocalDateTime;
+import java.util.Collections;
 
 public class Main {
    public static void main(String[] args) {
@@ -8,7 +9,7 @@ public class Main {
 //      2) Создать класс Блюдо (название, список ингредиентов, краткое описание, кол-во калорий, время приготовления).
 //      3) Создать класс Заказ (id, время заказа, безразмерный список блюд (экземпляров класса Блюдо), отметка о выполнении).
 //      4) Создать класс Заказы, содержащий безразмерный список заказов (экземпляров класса Заказ).
-//      5) Для классов Заказ реализовать возможность добавления, удаления, изменения состояния).
+//      5) Для классов Заказ реализовать возможность добавления, удаления, изменения состояния.
 //      6) Для класса Заказы реализовать возможность поиска (по времени, по наличию блюд с частичным совпадением названия, невыполненных заказов).
 //      7) Использовать обработку исключительных ситуаций при работе с классами.
 //      8) Реализовать проверки корректности значений для всех Setter'ов.
@@ -53,7 +54,7 @@ public class Main {
       System.out.println(orders);
 
 
-      orders.getOrderbyID(3).setState(State.finished);
+      orders.getOrderByID(2).setState(State.finished);
       System.out.println("\n\nSearch for finished orders:\n");
       try {
          System.out.println(orders.find(State.finished));
@@ -84,5 +85,12 @@ public class Main {
       } catch (Exception e) {
          System.out.println("Error while searching by title!");
       }
+
+      System.out.println("\n ------------- Sorted by state --------------- \n");
+      System.out.println(orders);
+      System.out.println();
+      Collections.sort(orders.orders, Order.byStateAscending);
+      Collections.reverse(orders.orders);
+      System.out.println(orders);
    }
 }

@@ -11,7 +11,7 @@ public class Orders {
    /**
     * список заказов
     */
-   private final List<Order> orders;
+   final List<Order> orders;
 
    /**
     * номер последнего сделанного заказа
@@ -30,7 +30,7 @@ public class Orders {
     *
     * @return найденный заказ
     */
-   public Order getOrderbyID(int id) {
+   public Order getOrderByID(int id) {
       for (Order order : orders) {
          if (order.getId() == id)
             return order;

@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -16,7 +17,15 @@ public class Order {
    private LocalDateTime orderTime; // время заказа
    private State state; // статус заказа
 
-   public Order(int tableNumber, Meal... meals) {
+   // public static Comparator byStateAscending = Comparator.comparing(o -> ((Order) o).state);
+   public static final Comparator byStateAscending = new Comparator() {
+      @Override
+      public int compare(Object o1, Object o2) {
+         return ((Order) o1).state.compareTo(((Order) o2).state);
+      }
+   };
+
+   public Order(final int tableNumber, Meal... meals) {
       this.orderTime = LocalDateTime.now();
       this.meals = new ArrayList<>();
 
