@@ -86,10 +86,15 @@ public class Main {
          System.out.println("Error while searching by title!");
       }
 
-      System.out.println("\n ------------- Sorted by state --------------- \n");
+      System.out.println("\n ------------- Orders before sorting --------------- \n");
       System.out.println(orders);
-      System.out.println();
-      Collections.sort(orders.orders, Order.byStateAscending);
+
+      // Collections.sort(orders.orders, Order.byStateAscending); // old style
+      orders.orders.sort(Order.byStateAscending);
+      System.out.println("\n ------------- Sorted by state ascending --------------- \n");
+      System.out.println(orders);
+
+      System.out.println("\n ------------- Sorted by state (after reverse) --------------- \n");
       Collections.reverse(orders.orders);
       System.out.println(orders);
    }
